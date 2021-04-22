@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple setInterval clock</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      p {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron">
+        <h1 class="display-4">
+            <p class="clock"></p>
+    <script>
+      function displayTime() {
+        let date = new Date();
+        let time = date.toLocaleTimeString();
+        document.querySelector('.clock').textContent = time;
+      }
+
+      displayTime();
+      const createClock = setInterval(displayTime, 1000);
+    </script>
+        </h1>
+        <p class="lead">Given clock shows you a time according to IST, if you want to times for different time zone then follow the button which is given below!</p>
+        <hr class="my-4">
+        <p>Live life like there is no tomorrow!
+        </p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Time-Zone</a>
+        </p>
+      </div>
+  </body>
+</html>
